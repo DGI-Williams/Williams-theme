@@ -13,7 +13,7 @@ Instructions:
 - mv williams-theme williams
 - enable the theme
 - the main navigation menu is populated with the primary links
-- the top right corner of the header will be populated with the secondary links
+- the bottom right corner of the footer will be populated with the secondary links
 
 In the Williams theme settings set where X = checked and O = unchecked
 X Logo
