@@ -16,7 +16,18 @@ dark blue         #0d4ca1
 body
 {
   font-family: Verdana,Arial,Helvetica,sans-serif;
-  background-color: #81728f;
+  background-color: #fff;
+}
+
+body .row
+{
+  max-width: 1110px;
+  min-width: 960px;
+/*
+  max-width: 1110px;
+  min-width: 1110px;
+*/
+
 }
 
 a,
@@ -51,10 +62,12 @@ h1.title
   padding-bottom: 12px;
   border-bottom: 5px solid #EEE5C6;
   color: #330066;
-  font-size: 2.2em;
+  font-size: 2.6em;
   letter-spacing: -1px;
   line-height: normal;
   font-weight: normal;
+  text-transform: uppercase;
+  
 }
 
 h2
@@ -111,23 +124,39 @@ div.content-help div.help
 
 #header-group
 {
-  background-color: #330066;
+  background-color: #512698;
+}
+
+.decorative-block
+{
+  width: 150px;
+  height: 15px;
+  background-color: #381a69;
+  border-right: 2px solid #fff;
 }
 
 #header-site-info
 {
-  margin: 30px 0px 0px 0px;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  border-bottom: 1px solid #fff;
+  border-top: 2px solid #fff;
+  
+  background: url('../images/header-image.png') center top no-repeat transparent;
 }
 
 #logo
 {
   float: left;
+  height: 140px;
+  margin: 0 0 0 15px;
+  background: url('../images/bg-60.png') center top repeat transparent;
 }
 
 #site-name-wrapper
 {
   float: left;
-  margin: 30px 0px 0px 15px;
+  margin: 90px 0 0 45px;
 }
 
 #site-name-wrapper,
@@ -148,8 +177,11 @@ div.content-help div.help
 #secondary-menu
 {
   float: right;
+  position: absolute;
+  right: 238px;
+  bottom: 0px;
   width: auto;
-  margin: 10px;
+  margin: 0 0 0 0;
 }
 
 #secondary-menu ul
@@ -159,14 +191,34 @@ div.content-help div.help
 
 #secondary-menu ul li
 {
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 3px;
+  
+  background: url('../images/link-olive.png') center right no-repeat transparent;
+}
 
+#secondary-menu ul li:nth-child(2)
+{
+  background-image: url('../images/link-orange.png');
+}
+
+#secondary-menu ul li:nth-child(3)
+{
+  background-image: url('../images/link-purple.png');
+}
+
+#secondary-menu ul li:nth-child(4)
+{
+  background-image: url('../images/link-blue.png');
 }
 
 #secondary-menu ul li a
 {
   border-bottom: 0 solid #A59AB0;
-  color: #fff;
-  padding: 5px 10px 4px 7px;
+  color: #000;
+  padding: 0px 10px 0px 7px;
   text-decoration: none;
 }
 
@@ -192,7 +244,8 @@ div.content-help div.help
 
 #primary-menu
 {
-  margin: 5px 0px;
+  margin: 0;
+  background: url('../images/menubar-wordmark.png') 780px -2px no-repeat transparent;
 }
 
 #primary-menu-inner
@@ -202,30 +255,64 @@ div.content-help div.help
 
 #primary-menu ul
 {
-  
+
+}
+
+#primary-menu.block ul
+{
+  margin-left: 13px;
 }
 
 #primary-menu ul li
 {
-  
+  width: 200px;
+  height: 40px;
+  background: url('../images/link-brown-1.png') center bottom repeat-x #d8e3ea;
+  border-left: 2px solid #fff;
+}
+
+#primary-menu ul li:nth-child(2)
+{
+  background-image: url('../images/link-brown-2.png');
+}
+
+#primary-menu ul li:nth-child(3)
+{
+  background-image: url('../images/link-brown-3.png');
+}
+
+#primary-menu ul li:nth-child(4)
+{
+  background-image: url('../images/link-brown-4.png');
+}
+
+#primary-menu ul li.last
+{
+  border-right: 2px solid #fff;
 }
 
 #primary-menu ul li a
 {
-  border-bottom: 0 solid #A59AB0;
-  color: #fff;
-  padding: 5px 10px 4px 7px;
+  padding: 5px 10px 17px 7px;
+ 
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 #primary-menu ul li a:hover
 {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #512698;
 }
 
 #primary-menu ul li a.active
 {
-
+  text-decoration: none;
+  color: #512698;
 }
 
 #primary-menu ul ul li a
@@ -267,13 +354,68 @@ div.content-help div.help
   font-weight: normal;
 }
 
+
+/* quicktabs */
+
+#quicktabs-islandora_search li.active a
+{
+  padding: 4px 10px;
+  background-color: #666;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  
+}
+
+#quicktabs-islandora_search li.first
+{
+  margin-right: 3px;
+}
+
+
 /* Footer */
 
 #footer
 {
-  background-color: #EEE5C6;
-  border-top: 1px solid #DBD0AA;
+  position: relative;
+  min-height: 115px;
+  background: url('../images/footer-logo.png') bottom right no-repeat #ddd;
+  border-top: 1px solid #c9c9c9;
   color: #5C4805;
 }
+
+.footer-info
+{
+  float: left;
+  margin: 10px;
+}
+
+.footer-info h2
+{
+  color: #717d31;
+}
+
+.footer-info a
+{
+  font-size: 90%;
+}
+
+.footer-info a.contact-link
+{
+  color: #717d31;
+}
+
+.decoration-footer
+{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 150px;
+  height: 5px;
+  background-color: #512698;
+}
+
+
+
 
 

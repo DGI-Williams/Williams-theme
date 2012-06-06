@@ -7,7 +7,7 @@ engine = phptemplate
 ; stylesheets
 stylesheets[all][] = css/fusion-starter-lite-style.css
 stylesheets[all][] = css/williams.css
-
+stylesheets[all][] = css/williams-solr.css
 ; javascript scripts
 scripts[] = js/script.js
 
@@ -18,7 +18,7 @@ regions[content] = content
 regions[footer] = footer
 
 ; Default theme settings
-settings[theme_grid] = grid12-960
+settings[theme_grid] = grid12-fluid
 settings[theme_grid_options][] = grid12-960
 settings[theme_grid_options][] = grid12-fluid
 settings[fluid_grid_width] = fluid-100

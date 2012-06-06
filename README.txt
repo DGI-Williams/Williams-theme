@@ -17,7 +17,7 @@ Instructions:
 
 In the Williams theme settings set where X = checked and O = unchecked
 X Logo
-X Site name
+O Site name
 O Site slogan
 O Mission statement
 O User pictures in posts
@@ -28,8 +28,8 @@ X Primary links
 X Secondary links 
 
 Fusion settings:
-- you can choose a fixed or fluid layout and set the width of the sidebars
-under: Fusion theme settings > General settings > Layout
+Use default (set to fluid)
+- Fusion theme settings > General settings > Layout
 
 Custom Williams theme settings:
 - none

@@ -27,9 +27,8 @@
     </div>
 
     <div id="header-group" class="header-group row clearfix <?php print $grid_width; ?>">
-      <?php print theme('grid_block', theme('links', $secondary_links), 'secondary-menu'); ?>
       <?php print theme('grid_block', $search_box, 'search-box'); ?>
-
+      <div class="decorative-block"></div>
       <?php if ($logo || $site_name || $site_slogan): ?>
       <div id="header-site-info" class="header-site-info block">
         <div id="header-site-info-inner" class="header-site-info-inner inner">
@@ -95,11 +94,14 @@
       </div><!-- /main-group -->
     </div><!-- /main -->
 
-    <?php if ($footer): ?>
     <div id="footer" class="footer row <?php print $grid_width; ?>">
-      <?php print $footer; ?>
+      <?php if ($footer): ?>
+        <?php print $footer; ?>
+      <?php endif; ?>
+      <?php print $footer_info; ?>
+      <div class="decoration-footer"></div>
+      <?php print theme('grid_block', theme('links', $secondary_links), 'secondary-menu'); ?>
     </div><!-- /footer -->
-    <?php endif; ?>
 
     <?php if ($footer_message): ?>
     <div id="footer-message" class="footer-message row <?php print $grid_width; ?>">
