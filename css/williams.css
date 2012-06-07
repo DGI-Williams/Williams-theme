@@ -119,6 +119,9 @@ div.content-help div.help
 
 
 
+
+
+
 /* Header */
 
 
@@ -334,6 +337,96 @@ div.content-help div.help
   background-color: #fff;
   padding: 15px 0px;
 }
+
+
+
+/* Front */
+
+
+.front .front-left
+{
+  margin-right: 250px;
+}
+
+.front .front-right
+{
+  float: right;
+  width: 200px;
+}
+
+.front-right img
+{
+  width: 100%;
+}
+
+.front .front-bottom
+{
+  float: left;
+  width: 100%;
+}
+
+
+/* Front slideshow */
+
+.front-bottom .view
+{
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #eee;
+}
+
+.front-bottom .view .view-content
+{
+
+}
+
+.front-bottom .view .views_slideshow_singleframe_slide
+{
+  padding: 20px;
+}
+
+.front-bottom .view .views-field-field-slideshow-image-fid
+{
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+.front-bottom .view
+{
+
+}
+
+.front-bottom .view
+{
+
+}
+
+.front-bottom .view
+{
+
+}
+
+.front-bottom .view .views_slideshow_singleframe_image_count
+{
+  width: 100%;
+  text-align: center;
+}
+
+.front-bottom .view .views_slideshow_singleframe_previous
+{
+  float: left;
+}
+
+.front-bottom .view .views_slideshow_singleframe_next
+{
+  float: right;
+}
+
+.front-bottom .view .views_slideshow_singleframe_pause
+{
+  display: none;
+}
+
 
 
 
