@@ -394,8 +394,8 @@ div.content-help div.help
 
 .front-bottom .view .views-field-field-slideshow-image-fid
 {
-  float: right;
-  margin: 0 0 10px 10px;
+  float: left;
+  margin: 10px 10px 0 0;
 }
 
 .front-bottom .view
@@ -408,9 +408,11 @@ div.content-help div.help
 
 }
 
-.front-bottom .view .views-field-body
+.front-bottom .view .views-field-title,
+.front-bottom .view .views-field-body,
+.front-bottom .view .views-field-edit-node
 {
-  margin-right: 250px;
+  margin-left: 240px;
 }
 
 .front-bottom .view .views_slideshow_singleframe_image_count
