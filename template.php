@@ -6,6 +6,9 @@
  */
 function williams_preprocess_page(&$vars) {
 
+  // include top navigation
+  $vars['top_nav'] = _williams_top_nav();
+
   // include footer info
   $vars['footer_info'] = _williams_info();
 
@@ -18,10 +21,36 @@ function williams_preprocess_page(&$vars) {
     $vars['title'] = 'Maya Motul de San Jose';
     // set content
     $vars['content'] = _williams_content_front();
-  
   }
 }
 
+
+
+/**
+ * Top navigation
+ */
+function _williams_top_nav() {
+  
+  // set variables
+  global $user;
+  $items = array();
+  
+  // manage repository link
+  if (in_array('authenticated user', $user->roles)) {
+    $items[] = l(t('Manage collection'), 'fedora/repository');
+  }
+
+  // login/logout
+
+  if ($user->uid == 0) {
+    $items[] = l(t('Log in'), 'user');
+  }
+  else {
+    $items[] = l(t('Log out'), 'logout');
+  }
+
+  return theme('item_list', $items, NULL, 'ul', $attributes = array('class' => 'top-nav'));
+}
 
 
 
@@ -86,58 +115,24 @@ function _williams_random_image() {
   global $base_url;
 
   // set variable
-  $pids = array('motul:635', 'motul:553', 'motul:417', 'motul:428');
-
-  // select a random PID
-  $rand_key = array_rand($pids, 1);
-  $pid = $pids[$rand_key];
-
-  // SPARQL query
-  $query='PREFIX fedora_model: <info:fedora/fedora-system:def/model#>
-SELECT $label 
-FROM <#ri>
-WHERE {
-{
-<info:fedora/' . $pid . '> fedora_model:label $label
-}
-}';
-
-  $limit = -1;
-  $offset = 0 ;
-  $type = 'sparql';
-  // get fedora url
-  $query_url = variable_get('fedora_repository_url', 'http://localhost:8080/fedora/risearch');
-  //run query
-  $query_url .= "?type=tuples&flush=TRUE&format=Sparql" . (($limit > 0)?("&limit=$limit"):"") . "&offset=$offset&lang=$type&query=" . urlencode($query);
-  // include file where do_curl is defined
-  module_load_include('inc', 'fedora_repository', 'api/fedora_utils');
-  // do curl and populate variable with the returned xml string
-  $query_return_string = do_curl($query_url);
-
-  if ($query_return_string) {
-    // create object from string
-    $query_return_dom = DOMDocument::loadXML($query_return_string);
-    // create xpath object from xml object
-    $xpath_dom = new DOMXPath($query_return_dom);
-    // register namespace
-    $xpath_dom->registerNamespace('sw', 'http://www.w3.org/2001/sw/DataAccess/rf1/result');
-    // use namespace for the xpath
-    $xpath = '//sw:label';
-    // create object with the results
-    $entries = $xpath_dom->query($xpath);
-
-    // alternatively, if you just want to use the first returned item, use: 
-    $label = $entries->item(0)->nodeValue;
-  }
-
-  // create image, title and links
-  $img = '<img src="' . $base_url . '/fedora/repository/' . $pid . '/TN/TN" />';
-  $output = l($img, 'fedora/repository/' . $pid, array('html' => TRUE, 'attributes' => array('title' => $label)));
-  $output .= '<br />';
-  $output .= l($label, 'fedora/repository/' . $pid, array('attributes' => array('title' => $label)));
+  // find images
+  $directory = drupal_get_path('theme', 'williams') . '/images/front';
+  $mask = '.png';
+  $files = file_scan_directory($directory, $mask);
   
-  return $output;
-
+  $file_paths = array();
+  foreach ($files as $value) {
+    $file_paths[] = $value->filename;
+  }
+  
+  
+  $rand_key = array_rand($file_paths, 1);
+  $file = $file_paths[$rand_key];
+  
+  // create image, title and links
+  $img = '<img src="' . $base_url . '/' . $file . '" />';
+ 
+  return $img;
 }
 
 

@@ -27,6 +27,7 @@
     </div>
 
     <div id="header-group" class="header-group row clearfix <?php print $grid_width; ?>">
+      <?php print $top_nav; ?>
       <?php print theme('grid_block', $search_box, 'search-box'); ?>
       <div class="decorative-block"></div>
       <?php if ($logo || $site_name || $site_slogan): ?>

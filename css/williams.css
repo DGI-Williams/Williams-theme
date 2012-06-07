@@ -133,7 +133,7 @@ div.content-help div.help
 .decorative-block
 {
   width: 150px;
-  height: 15px;
+  height: 27px;
   background-color: #381a69;
   border-right: 2px solid #fff;
 }
@@ -236,6 +236,32 @@ div.content-help div.help
 }
 
 /* Header */
+
+
+
+ul.top-nav
+{
+  float: right;
+  margin: 5px 10px 4px 0;
+  
+  list-style: none;
+  list-style-image: none;
+}
+
+ul.top-nav li
+{
+  display: inline-block;
+  margin-left: 10px;
+  
+  list-style: none;
+  list-style-image: none;
+}
+
+ul.top-nav li a
+{
+  color: #fff;
+}
+
 
 
 /* Navigation */
@@ -345,18 +371,23 @@ div.content-help div.help
 
 .front .front-left
 {
-  margin-right: 250px;
+  margin-right: 300px;
 }
 
 .front .front-right
 {
   float: right;
-  width: 200px;
+  width: 250px;
+  padding: 15px 0;  
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #eee;
 }
 
 .front-right img
 {
-  width: 100%;
+  max-height: 200px;
+  max-width: 200px;
 }
 
 .front .front-bottom
@@ -373,6 +404,8 @@ div.content-help div.help
   margin-top: 20px;
   padding: 20px;
   background-color: #eee;
+  
+  border: 1px solid #ddd;
 }
 
 .front-bottom .view h2
@@ -382,30 +415,10 @@ div.content-help div.help
   font-weight: normal;
 }
 
-.front-bottom .view .view-content
-{
-
-}
-
-.front-bottom .view .views_slideshow_singleframe_slide
-{
-
-}
-
 .front-bottom .view .views-field-field-slideshow-image-fid
 {
   float: left;
   margin: 10px 10px 0 0;
-}
-
-.front-bottom .view
-{
-
-}
-
-.front-bottom .view
-{
-
 }
 
 .front-bottom .view .views-field-title,
