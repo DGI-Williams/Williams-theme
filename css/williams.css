@@ -375,6 +375,13 @@ div.content-help div.help
   background-color: #eee;
 }
 
+.front-bottom .view h2
+{
+  color: #512698;
+  font-size: 25px;
+  font-weight: normal;
+}
+
 .front-bottom .view .view-content
 {
 
@@ -382,7 +389,7 @@ div.content-help div.help
 
 .front-bottom .view .views_slideshow_singleframe_slide
 {
-  padding: 20px;
+
 }
 
 .front-bottom .view .views-field-field-slideshow-image-fid
@@ -401,9 +408,9 @@ div.content-help div.help
 
 }
 
-.front-bottom .view
+.front-bottom .view .views-field-body
 {
-
+  margin-right: 250px;
 }
 
 .front-bottom .view .views_slideshow_singleframe_image_count
@@ -415,11 +422,13 @@ div.content-help div.help
 .front-bottom .view .views_slideshow_singleframe_previous
 {
   float: left;
+  margin-left: 41%
 }
 
 .front-bottom .view .views_slideshow_singleframe_next
 {
   float: right;
+  margin-right: 41%
 }
 
 .front-bottom .view .views_slideshow_singleframe_pause

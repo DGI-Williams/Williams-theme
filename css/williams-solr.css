@@ -10,19 +10,19 @@ ol.islandora_solr_results
 
 .islandora_solr_results .odd
 {
-  background-color: #81728f;
+  background-color: #fafafa;
 }
 
 .islandora_solr_results .even
 {
-  background-color: #81728f;
+  background-color: #eee;
 }
 
 .islandora_solr_result
 {
   float:none;
   display:block;
-  border: 1px solid #81728f;
+  border: 1px solid #ddd;
   clear:both;
   position:relative;
   font-size:12px;
@@ -65,7 +65,7 @@ ol.islandora_solr_results
 .islandora_solr_result .solr-field:last-child 
 {
   float:none;
-  border-bottom: 1px dotted #CCC1A0;
+  border-bottom: 1px dotted #bbb;
   margin:0 10px 5px 0;
   padding:3px;
   width:auto;
@@ -90,9 +90,9 @@ ol.islandora_solr_results
 .islandora_solr_result .solr-field a
 {
   padding:3px 0;
-//  text-decoration:none;
-  font-weight:bold;
-  color:black;
+/*  text-decoration: underline; */
+  font-weight: bold;
+  color: #663399;
 }
 
 .islandora_solr_result .solr-field .value .solr-page-number
@@ -122,27 +122,27 @@ ul.islandora_solr_search_facet_list
   padding:0;
   margin:0.5em 0 1em;
   
-  border-left: 1px solid #CCC1A0;
-  border-right: 1px solid #CCC1A0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
 }
 
 ul.islandora_solr_search_facet_list li
 {
   list-style:inherit;
-  border-top: 1px solid #CCC1A0;
-  background-color: #FFFFFF;
+  border-top: 1px solid #ddd;
+  background-color: #fafafa;
   position: relative;
   padding: .3em 2.5em .3em .4em;
 }
 
 ul.islandora_solr_search_facet_list li.last
 {
-  border-bottom: 1px solid #CCC1A0;
+  border-bottom: 1px solid #ddd;
 }
 
 ul.islandora_solr_search_facet_list li .plusminus
 {
-  border-left: 1px solid #CCC1A0;
+  border-left: 1px dotted #ddd;
   padding-left: 0.3em;
   height: 100%;
   position: absolute;
@@ -154,8 +154,8 @@ ul.islandora_solr_search_facet_list li .plusminus
 
 ul.islandora_solr_search_facet_list a
 {
-  text-decoration:none;
-  font-weight:bold;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 ul.islandora_solr_search_facet_list a:hover
