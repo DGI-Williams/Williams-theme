@@ -50,9 +50,9 @@
       // if no page thumbnail exists, use the parent (book cover) one
       $item_title = $result['mods_title_ms']['value'];
       $link_url = $base_url.'/fedora/repository/'.$result['PID']['value'];
-      $subtitle_value = false;
       $creator_value = ( empty( $result['mods_name_creator_ms']['value']) ? false : $result['mods_name_creator_ms']['value'] );
-      $form = ( empty( $result['mods_physical_description_form_ms']['value']) ? false : $result['mods_physical_description_form_ms']['value'] );
+      $form = ( empty( $result['mods_physical_description_form_material_ms']['value']) ? false : $result['mods_physical_description_form_material_ms']['value'] );
+      $phys_note = ( empty( $result['mods_physical_description_note_ms']['value']) ? false : $result['mods_physical_description_note_ms']['value'] );
       $source_collection_value = ( empty( $result['mods_host_title_ms']['value']) ? false : $result['mods_host_title_ms']['value'] );
       $type_value = ( empty( $result['mods_resource_type_ms']['value']) ? false : $result['mods_resource_type_ms']['value'] );
       $tn_url = $base_url."/fedora/repository/".$result['PID']['value']."/TN";
@@ -90,19 +90,40 @@
             </a>
           </div>
         </div>
+
         <?php if($creator_value): ?>
         <div class="solr-field <?php print $result['mods_name_creator_ms']['class']; ?>">
-          <div class="value"><label><?php print t($result['mods_name_creator_ms']['label']); ?></label><?php print $creator_value; ?></div>
+          <div class="value"><label>
+          <?php print t($result['mods_name_creator_ms']['label']); ?>
+          </label>
+          <?php print $creator_value; ?></div>
         </div>
         <?php endif; ?>
+
         <?php if($form): ?>
-        <div class="solr-field <?php print $result['mods_host_title_ms']['class']; ?>">
-          <div class="value"><label><?php print t($result['mods_host_title_ms']['label']); ?></label><?php print $source_collection_value; ?></div>
+        <div class="solr-field <?php print $result['mods_physical_description_form_material_ms']['class']; ?>">
+          <div class="value"><label>
+          <?php print t($result['mods_physical_description_form_material_ms']['label']); ?>
+          </label>
+          <?php print $form; ?></div>
         </div>
         <?php endif; ?>
+
         <?php if($type_value): ?>
         <div class="solr-field <?php print $result['mods_resource_type_ms']['class']; ?>">
-          <div class="value"><label><?php print t($result['mods_resource_type_ms']['label']); ?></label><?php print $type_value; ?></div>
+          <div class="value"><label>
+          <?php print t($result['mods_resource_type_ms']['label']); ?>
+          </label>
+          <?php print $type_value; ?></div>
+        </div>
+        <?php endif; ?>
+
+        <?php if($phys_note): ?>
+        <div class="solr-field <?php print $result['mods_physical_description_note_ms']['class']; ?>">
+          <div class="value"><label>
+          <?php print t($result['mods_physical_description_note_ms']['label']); ?>
+          </label>
+          <?php print $phys_note; ?></div>
         </div>
         <?php endif; ?>
 
