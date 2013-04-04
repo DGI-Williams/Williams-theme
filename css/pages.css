@@ -43,12 +43,19 @@ body {
  */
 
 #header {
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  border-bottom: 1px solid #fff;
+  border-top: 2px solid #fff;
+  background: url('../images/header-image.png') center top no-repeat transparent;
+  background-color: #330066;
 }
 
 #logo { /* Wrapping link for logo */
-  float: left;
-  margin: 0;
-  padding: 0;
+ float: right;
+  height: 140px;
+  margin: 0 0 0 15px;
+  background: url('../images/bg-60.png') center top repeat transparent;
 }
 #logo img {
   vertical-align: bottom;
@@ -221,6 +228,7 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 #footer {
+    
 }
 
 /*
@@ -228,4 +236,5 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
+
 }
