@@ -120,7 +120,16 @@ body {
   padding: 0;
 }
 
-h1.title, /* The title of the page */
+h1.title {
+  margin: 0 0 15px;
+  padding-bottom: 12px;
+  color: #330066;
+  font-size: 2.6em;
+  letter-spacing: -1px;
+  line-height: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+}
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
 h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
@@ -235,10 +244,7 @@ span.field-label { /* The inline field label used by the Fences module */
     height: 7.7em;
     margin-top: 1em;
     position: relative;
-}
-
-#footer {
- font-size: 95%;   
+    font-size: 95%;
 }
 
 /*

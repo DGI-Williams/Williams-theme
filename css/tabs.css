@@ -22,12 +22,14 @@ ul.secondary {
   margin: 1em 0 1.5em;
   padding: 0 2px;
   white-space: nowrap;
+  color: red;
 }
 
 ul.primary li,
 ul.secondary li {
   float: left;
   margin: 0.5em 3px 0;
+  color: red;
 }
 
 ul.primary a,
@@ -59,11 +61,13 @@ ul.primary li {
   border: 1px solid #bbbbbb;
   border-bottom: 0;
   margin: 0.5em 0 0 3px;
+  color: red;
 }
 
 ul.primary li.active {
   border-bottom: 1px solid white;
   margin-bottom: -1px; /* Overlap the ul's border. */
+  color: red;
 }
 
 ul.primary a:link,
