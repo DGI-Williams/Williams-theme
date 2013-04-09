@@ -20,7 +20,8 @@
 .block.even { /* Zebra striping for each block in the region */
 }
 
-h2.block-title { /* Block title */
+h2.block-title { 
+    font-size: 90%;
 }
 
 #block-aggregator-category-1 { /* Block for the latest news items in the first category */

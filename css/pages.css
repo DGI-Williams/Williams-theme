@@ -247,6 +247,7 @@ span.field-label { /* The inline field label used by the Fences module */
     font-size: 95%;
 }
 
+
 /*
  * Page bottom
  */
@@ -254,3 +255,21 @@ span.field-label { /* The inline field label used by the Fences module */
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 
 }
+
+
+.front-slide-image img{
+    width: 358px;
+    height: 250px;   
+}
+
+.node-2 .field-label {
+    display: none;
+}
+
+.node-2 .field-item {
+    width: 50%;
+    float: left;
+}
+
+
+

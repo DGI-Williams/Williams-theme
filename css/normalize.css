@@ -222,6 +222,7 @@ body {
 
 a:link {
     color: #663399;
+    text-decoration: none;
 }
 
 a:visited {
@@ -278,8 +279,8 @@ h1 {
 }
 
 h2 {
-  font-size: 15em;
-  line-height: 2em; /* 3rem / 1.5em = 2em */
+  font-size: 1.5em;
+  line-height: 1em; /* 3rem / 1.5em = 2em */
   margin-top: 1em; /* 1.5rem / 1.5em = 1em */
   margin-bottom: 1em;
 }
