@@ -59,7 +59,7 @@ body {
 }
 #logo img {
   padding: 16px 9px 0;
-    width: 260px;
+  width: 260px;
 }
 
 #name-and-slogan { /* Wrapper for website name and slogan */
@@ -102,6 +102,24 @@ body {
  */
 
 #content {
+}
+
+/*
+ * Image slideshow
+ */
+
+.front-slide-image img{
+    width: 358px;
+    height: 250px;   
+}
+
+.node-2 .field-label {
+    display: none;
+}
+
+.node-2 .field-item {
+    width: 50%;
+    float: left;
 }
 
 .region-highlighted {
@@ -253,7 +271,14 @@ span.field-label { /* The inline field label used by the Fences module */
     text-decoration: none;
 }
 
+ul.menu a:hover {
+    text-decoration: underline;
+}
 
+ul.nice-menu li a:hover {
+    color: purple;
+   
+}
 
 /*
  * Page bottom
@@ -264,19 +289,7 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 
-.front-slide-image img{
-    width: 358px;
-    height: 250px;   
-}
 
-.node-2 .field-label {
-    display: none;
-}
-
-.node-2 .field-item {
-    width: 50%;
-    float: left;
-}
 
 
 
