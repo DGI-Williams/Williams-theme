@@ -246,6 +246,13 @@ span.field-label { /* The inline field label used by the Fences module */
     position: relative;
     font-size: 95%;
 }
+ ul.menu a{
+    font-size: 95%;
+    color: #717D31;
+    font-weight: bold; 
+    text-decoration: none;
+}
+
 
 
 /*
