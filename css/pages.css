@@ -139,9 +139,9 @@ body {
 }
 
 h1.title {
-  margin: 0 0 15px;
+  margin: 6px 0 -3px;
   color: #330066;
-  font-size: 2.6em;
+  font-size: 2em;
   letter-spacing: -1px;
   line-height: normal;
   font-weight: normal;
@@ -213,6 +213,21 @@ ul.inline li {
   padding: 0 1em 0 0;
 }
 
+ul.menu a{
+    font-size: 95%;
+    color: #717D31;
+    font-weight: bold; 
+    text-decoration: none;
+}
+
+ul.menu a:hover {
+    text-decoration: underline;
+}
+
+ul.nice-menu li a:hover {
+    color: #800080;
+}
+
 span.field-label { /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
 }
@@ -263,21 +278,7 @@ span.field-label { /* The inline field label used by the Fences module */
     position: relative;
     font-size: 95%;
 }
- ul.menu a{
-    font-size: 95%;
-    color: #717D31;
-    font-weight: bold; 
-    text-decoration: none;
-}
-
-ul.menu a:hover {
-    text-decoration: underline;
-}
-
-ul.nice-menu li a:hover {
-    color: purple;
-   
-}
+ 
 
 /*
  * Page bottom
