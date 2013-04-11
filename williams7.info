@@ -96,6 +96,7 @@ stylesheets[all][] = css/print.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
+regions[sub_header]     = Sub header
 regions[header]         = Header
 regions[navigation]     = Navigation bar
 regions[highlighted]    = Highlighted

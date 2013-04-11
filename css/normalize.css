@@ -125,7 +125,7 @@ html {
   font-size: 87.5%; /* 16px x .875 = 14px */
 
   /* Use a 16px base font size */
-  font-size: 100%; /* 1 */
+  /*font-size: 100%; /* 1 */
 
   -webkit-text-size-adjust: 100%; /* 2 */
   -ms-text-size-adjust: 100%; /* 2 */

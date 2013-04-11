@@ -101,5 +101,40 @@ li a.active {
  * these limitations, see http://drupal.org/project/menu_block
  */
 
+.region-sub-header {
+    width: 100%;
+    background: #330066;
+    height: 1.7em;
+}
+
 .block-menu-block {
+}
+
+#block-menu-menu-top-menu {
+    float: right;
+    margin: 0;
+    font-size: 80%;
+}
+
+#block-menu-menu-top-menu ul {
+    margin: 0;
+}
+
+#block-menu-menu-top-menu ul li {
+    list-style: none;
+}
+
+#block-menu-menu-footer-menu {
+    
+    
+}
+
+#block-menu-menu-footer-menu ul li {
+    list-style: none;
+    font-size: 80%;
+    line-height: 1.5em;
+}
+
+#block-menu-menu-footer-menu ul li.first {
+    font-size: 95%;
 }
