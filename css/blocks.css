@@ -21,7 +21,8 @@
 }
 
 h2.block-title { 
-    font-size: 90%;
+    font-size: 93%;
+    text-decoration: underline;
 }
 
 #block-aggregator-category-1 { /* Block for the latest news items in the first category */

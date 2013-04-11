@@ -5,7 +5,7 @@
 
 
 .form-item { /* Wrapper for a form element (or group of form elements) and its label */
-  margin: 1.5em 0;
+  margin: 0.5em 0;
 }
 
 .form-item input.error,
@@ -15,7 +15,7 @@
 }
 
 .form-item label { /* The label for a form element */
-  display: block;
+  display: inherit;
   font-weight: bold;
 }
 
