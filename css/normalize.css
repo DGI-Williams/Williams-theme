@@ -370,7 +370,9 @@ mark {
 p,
 pre {
   /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
-  margin: 1.5em 0;
+  margin: 2em 0;
+  font-size: 15px;
+  margin-right: 1em;
 }
 
 /*
@@ -618,7 +620,6 @@ input[type="submit"] {
   cursor: pointer; /* 1 */
   -webkit-appearance: button; /* 2 */
   *overflow: visible;  /* 3 */
-  float: left;
 }
 
 /*

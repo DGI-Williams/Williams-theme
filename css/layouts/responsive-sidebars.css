@@ -81,7 +81,7 @@
     top: -0.5em; /* Move the navbar up inside #main's padding. */
     height: 2.1em;
     width: 100%;
-    background-color: #330066;
+    background-color: #512698;
     
   }
 }
@@ -228,10 +228,15 @@
     margin-right: -80%;
   }
   .sidebar-second .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-    float: left;
-    width: 20%;
-    margin-left: 80%;
-    margin-right: -100%;
+    border: 3px ridge #512698;
+    color: #512698;
+    float: none;
+    margin-left: 81%;
+    margin-top: 3%;
+    padding: 12px 0 0 13px;
+    width: 19%;
+    border-bottom: 10px ridge #512698;
+    border-top: 10px ridge #512698;
   }
 
   /*

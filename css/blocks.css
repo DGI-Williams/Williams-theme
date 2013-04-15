@@ -21,8 +21,10 @@
 }
 
 h2.block-title { 
-    font-size: 93%;
-    text-decoration: underline;
+    font-size: 100%;
+    text-decoration: none;
+    padding-bottom: 15px;
+    text-transform: capitalize;
 }
 
 #block-aggregator-category-1 { /* Block for the latest news items in the first category */

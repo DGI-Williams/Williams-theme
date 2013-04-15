@@ -47,7 +47,7 @@ body {
   margin: 0em;
   border-bottom: 1px solid #fff;
   background: url('../images/header-image_1.png') left top no-repeat transparent;
-  background-color: #330066;
+  background-color: #512698;
   clear: both;
 }
 
@@ -139,7 +139,7 @@ body {
 }
 
 h1.title {
-  margin: 6px 0 3em;
+  margin: 6px 0 1em;
   color: #330066;
   font-size: 2em;
   letter-spacing: -1px;
@@ -149,7 +149,7 @@ h1.title {
 }
 
 .front h1.title {
-    margin-bottom: 0.2em;
+    margin-bottom: -0.5em;
 }
 
 h2.node-title, /* Title of a piece of content when it is given in a list of content */
@@ -219,10 +219,12 @@ ul.inline li {
 }
 
 ul.menu a{
-    font-size: 95%;
-    color: #717D31;
-    font-weight: normal; 
+    color: #FFFFFF;
+    font-size: 120%;
+    font-weight: normal;
+    padding-right: 10px;
     text-decoration: none;
+    
 }
 
 ul.menu a:hover {
@@ -284,6 +286,19 @@ span.field-label { /* The inline field label used by the Fences module */
     font-size: 95%;
 }
 
+#footer .first li a {
+    color: #717D31;
+    font-size: 115%;
+    font-weight: bold;
+}
+
+#footer  li.leaf:not(.first) a {
+    padding-left: 20px;
+    color:  purple;
+    font-weight: normal;
+    font-size: 100%;
+}
+
 /*
  * Page bottom
  */
@@ -291,9 +306,3 @@ span.field-label { /* The inline field label used by the Fences module */
 .region-bottom { /* Wrapper for any blocks placed in the page bottom region */
 
 }
-
-
-
-
-
-
