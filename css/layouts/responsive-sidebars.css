@@ -228,15 +228,15 @@
     margin-right: -80%;
   }
   .sidebar-second .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-    border: 3px ridge #512698;
+    border: 4px solid #BEBEC2;
+    outline: 6px solid #512698;
     color: #512698;
     float: none;
-    margin-left: 81%;
+    margin-left: 79.5%;
     margin-top: 3%;
-    padding: 12px 0 0 13px;
-    width: 19%;
-    border-bottom: 10px ridge #512698;
-    border-top: 10px ridge #512698;
+    padding: 12px 0 0 9px;
+    width: 20%;
+    background-color: #DDDDDD;
   }
 
   /*
