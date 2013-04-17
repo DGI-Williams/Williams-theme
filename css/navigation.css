@@ -103,7 +103,7 @@ li a.active {
 
 .region-sub-header {
     width: 100%;
-    background: #330066;
+    background: #512698;
     height: 1.7em;
 }
 
@@ -137,4 +137,61 @@ li a.active {
 
 #block-menu-menu-footer-menu ul li.first {
     font-size: 95%;
+    margin-bottom: 0.3em;
+}
+
+/*
+ * "Nice Menu Styling"
+ *
+ * 
+ * 
+ */
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: none;
+  text-transform: uppercase;
+}
+
+ul.nice-menu li {
+  display: inline-block;
+  height: 29px;
+  list-style-type: none;
+  text-align: center;
+  width: 190px;
+}
+
+ul.nice-menu a {
+  padding: 0.3em 5px 0.3em 5px;
+  text-decoration: none;
+  color: black;
+  background-color: #d3d3d3;
+  border: 1px solid #bbb;
+  margin: 0;
+  font-size: 1.2em;
+ }
+
+ul.nice-menu ul {
+  top: 34px;
+  left: 8px; /* LTR */
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-right: 0; /* LTR */  
+}
+
+ul.nice-menu li ul li {
+    padding: 5px 0;
+}
+
+ul.nice-menu ul li {
+  width: 190px;
+  margin: -8px;
+  padding-left: 3px;
+}
+
+ul.nice-menu-down li {
+ border: none; 
 }

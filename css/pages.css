@@ -110,7 +110,8 @@ body {
 
 .front-slide-image img{
     width: 358px;
-    height: 250px;   
+    height: 250px; 
+    margin-top: -1.2em;
 }
 
 .node-2 .field-label {
