@@ -79,7 +79,7 @@
   #navigation {
     position: absolute;
     top: -0.5em; /* Move the navbar up inside #main's padding. */
-    height: 2.4em;
+    height: 2.35em;
     width: 100%;
     background-color: #512698;
     
@@ -236,7 +236,7 @@
     margin-top: 3%;
     padding: 12px 0 0 9px;
     width: 20%;
-    background-color: #DDDDDD;
+    background-color: #EEEEEE;
   }
 
   /*
