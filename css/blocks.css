@@ -25,6 +25,7 @@ h2.block-title {
     text-decoration: none;
     padding-bottom: 15px;
     text-transform: capitalize;
+    text-align: center;
 }
 
 #block-aggregator-category-1 { /* Block for the latest news items in the first category */
