@@ -149,10 +149,6 @@ li a.active {
 
 ul.nice-menu,
 ul.nice-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border-top: none;
   text-transform: uppercase;
 }
 
@@ -162,6 +158,8 @@ ul.nice-menu li {
   list-style-type: none;
   text-align: center;
   width: 190px;
+  float: none;
+  background-color: #d3d3d3;
 }
 
 ul.nice-menu a {
