@@ -232,17 +232,10 @@
     -moz-border-left-colors: none;
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
-    background-color: #EEEEEE;
-    border-color: -moz-use-text-color;
-    border-image: none;
-    border-style: solid;
-    border-width: 1px 1px 13px;
-    color: #512698;
     float: left;
-    margin-left: 79.5%;
-    margin-top: 1.5%;
-    padding: 0 0 0 9px;
     width: 20%;
+    margin-left: 80%;
+    margin-right: -100%;
   }
 
   /*

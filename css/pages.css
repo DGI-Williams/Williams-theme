@@ -274,11 +274,42 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 /*
+ * Quick tabs search 
+ */
+
+#block-quicktabs-search-tabs {
+    background-color: #EEEEEE;
+    border-color: -moz-use-text-color;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 13px;
+    color: #512698;
+    margin-top: 1.5%;
+    padding: 0 0 0 9px;
+    width: 95%;  
+}
+
+/*
+ * Facet for search results
+ */
+
+#block-islandora-solr-basic-facets {
+    background-color: #EEEEEE;
+    border-color: -moz-use-text-color;
+    border-image: none;
+    border-style: solid;
+    border-width: 1px 1px 13px;
+    color: #512698;
+    margin-top: 1.5%;
+    padding: 0 0 0 9px;
+    width: 95%;  
+}
+
+/*
  * Footer
  */
 
 #footer {
-    
     background: url("../images/footer-logo.png") no-repeat scroll right bottom #DDDDDD;
     color: #5C4805;
     height: 7.7em;
