@@ -279,8 +279,6 @@ span.field-label { /* The inline field label used by the Fences module */
 
 #block-quicktabs-search-tabs {
     background-color: #EEEEEE;
-    border-color: -moz-use-text-color;
-    border-image: none;
     border-style: solid;
     border-width: 1px 1px 13px;
     color: #512698;
@@ -296,8 +294,6 @@ span.field-label { /* The inline field label used by the Fences module */
 
 #block-islandora-solr-basic-facets {
     background-color: #EEEEEE;
-    border-color: -moz-use-text-color;
-    border-image: none;
     border-style: solid;
     border-width: 1px;
     margin-top: 1.5%;
