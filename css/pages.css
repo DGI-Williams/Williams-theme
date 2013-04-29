@@ -285,8 +285,9 @@ span.field-label { /* The inline field label used by the Fences module */
     border-width: 1px 1px 13px;
     color: #512698;
     margin-top: 1.5%;
+    margin-bottom: 10%;
     padding: 0 0 0 9px;
-    width: 95%;  
+    width: 95%;     
 }
 
 /*
@@ -298,10 +299,9 @@ span.field-label { /* The inline field label used by the Fences module */
     border-color: -moz-use-text-color;
     border-image: none;
     border-style: solid;
-    border-width: 1px 1px 13px;
-    color: #512698;
+    border-width: 1px;
     margin-top: 1.5%;
-    padding: 0 0 0 9px;
+    padding: 10px 0 0 9px;
     width: 95%;  
 }
 
