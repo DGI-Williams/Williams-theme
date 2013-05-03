@@ -224,3 +224,87 @@ function williams7_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements hook_preprocess().
+ */
+function williams7_preprocess_islandora_large_image(&$variables) {
+  william7_mods_display($variables['islandora_object']);
+  if($mods = william7_mods_display($variables['islandora_object'])) {
+    $variables['dc_array'] = $mods;
+  }
+}
+
+function william7_mods_display($object) {
+  $mods_metadata = array();
+  if($object['MODS']) {
+    $mods = new SimpleXMLElement($object['MODS']->content);
+
+    $mods_info = array(
+      array("label" => "Title", "path" => "mods:titleInfo/mods:title/text()"),
+      array("label" => "Site", "path" => "mods:subject/mods:hierarchicalGeographic/text()"),
+      array("label" => "Operation", "path" => "mods:note[@type='operation']/text()"),
+      array("label" => "Suboperation", "path" => "mods:note[@type='subop']/text()"),
+      array("label" => "Unit", "path" => "mods:note[@type='unit']/text()"),
+      array("label" => "Level", "path" => "mods:note[@type='level']/text()"),
+      array("label" => "Lot", "path" => "mods:note[@type='lot']/text()"),
+      array("label" => "Citation", "path" => "mods:note[@type='citation']/text()"),
+      array("label" => "Subject/Keywords", "path" => "mods:subject[not(mods:*)]/text()"),
+      array("label" => "Creator", "path" => "mods:name/mods:namePart[../mods:role/mods:roleTerm/text()='creator']"),
+      array("label" => "Contributor", "path" => "mods:name/mods:namePart[../mods:role/mods:roleTerm/text()='contributor']"),
+      array("label" => "Source", "path" => "mods:name/mods:namePart[../mods:role/mods:roleTerm/text()='photographer']"),
+      array("label" => "Department", "path" => "mods:name/mods:namePart[../mods:role/mods:roleTerm/text()='department']"),
+      array("label" => "Language", "path" => "mods:language/mods:languageTerm/text()"),
+      array("label" => "Slide", "path" => "mods:identifier[@type='slide']/text()"),
+      array("label" => "Batch", "path" => "mods:identifier[@type='batch']/text()"),
+      array("label" => "Catalog", "path" => "mods:identifier[@type='catalog']/text()"),
+      array("label" => "Analysis", "path" => "mods:identifier[@type='analysis']/text()"),
+      array("label" => "INAA", "path" => "mods:identifier[@type='INAA']/text()"),
+      array("label" => "Petrography", "path" => "mods:identifier[@type='petrography']/text()"),
+      array("label" => "Vessel", "path" => "mods:identifier[@type='vessel']/text()"),
+      array("label" => "Rights", "path" => "mods:accessCondition/text()"),
+      array("label" => "Type of Resource", "path" => "mods:typeOfResource/text()"),
+      array("label" => "Date Created", "path" => "mods:dateCreated/text()"),
+      array("label" => "Time", "path" => "mods:subject/mods:temporal/text()"),
+      array("label" => "Geographic", "path" => "mods:subject/mods:geographic/text()"),
+      array("label" => "Unit", "path" => "mods:subject[@displayLabel='']/mods:topic/text()"),
+      array("label" => "Architectural Feature", "path" => "mods:subject[@displayLabel='architectural feature']/mods:topic/text()"),
+      array("label" => "Type of Discovery", "path" => "mods:subject[@displayLabel='discovery']/mods:topic/text()"),
+      array("label" => "Cultural Keywords", "path" => "mods:subject[@displayLabel='culture keywords']/mods:topic/text()"),
+      array("label" => "Soil Type", "path" => "mods:subject[@displayLabel='environmental keywords']/mods:topic/text()"),
+      array("label" => "Note", "path" => "mods:note[not(@type)]/text()"),
+      array("label" => "Description", "path" => "mods:abstract/text()"),
+      array("label" => "Physical Description", "path" => "mods:physicalDescription/mods:note/text()"),
+      array("label" => "Ceramic Type", "path" => "mods:physicalDescription/mods:form[@type='material']/text()"),
+      array("label" => "Physical Location", "path" => "mods:location/mods:physicalLocation/text()"),
+      array("label" => "Url", "path" => "mods:location/mods:url/text()"),
+      array("label" => "Suboperation Description", "path" => "mods:subject/mods:topic"),
+      array("label" => "Coordinates", "path" => "mods:subject/mods:cartographics/mods:coordinates"),
+      array("label" => "Date Captured", "path" => "mods:originInfo/mods:dateCaptured"),
+      array("label" => "Publisher", "path" => "mods:originInfo/mods:publisher"),
+      array("label" => "Place of Publication", "path" => "mods:originInfo/mods:place/mods:placeTerm"),
+      array("label" => "Date Published", "path" => "mods:originInfo/mods:dateIssued"),
+    );
+
+    foreach($mods_info as $info) {
+      $path = $info['path'];
+      $value = $mods->xpath("/mods:mods/$path");
+      if(count($value) >= 1) {
+        $value = (string)$value[0];
+        if($value) {
+          $mods_metadata[] = array(
+            'label' => $info['label'],
+            'value' => trim((string) $value),
+          );
+        }
+      }
+    }
+    if(count($mods_metadata) == 0) {
+      $mods_metadata = FALSE;
+    }
+  }
+  else {
+    $mods_metadata = FALSE;
+  }
+  return $mods_metadata;
+}
