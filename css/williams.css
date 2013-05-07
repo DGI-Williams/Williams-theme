@@ -1,0 +1,21 @@
+/**
+ * General style sheet for Williams D7
+ */
+
+ .mods_label {
+    font-weight: bold;
+    background: #eee;
+    width: 170px;
+    border-bottom: 2px;
+    border-bottom-color: #DDDDDD;
+    border-bottom-style: solid;
+ }
+
+ .mods_value, .mods_label {
+    vertical-align: top;
+    padding: 2px;
+ }
+ #williams-metadata-wrapper table {
+     margin-top: 0px;
+
+ }
