@@ -232,7 +232,23 @@ function williams7_preprocess_islandora_large_image(&$variables) {
   william_mods_metadata_table($variables);
 }
 
+/**
+ * Implements hook_preprocess().
+ */
+function williams7_preprocess_islandora_pdf(&$variables) {
+  william_mods_metadata_table($variables);
+}
 
+/**
+ * Implements hook_preprocess().
+ */
+function williams7_preprocess_islandora_basic_image(&$variables) {
+  william_mods_metadata_table($variables);
+} 
+
+/*
+ * Use a MODS to HTML xslt for the metadata fieldset
+ */
 function william_mods_metadata_table(&$variables) {
   $object = $variables['islandora_object'];
   if($object['MODS']) {
