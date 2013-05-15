@@ -229,32 +229,36 @@ function williams7_preprocess_block(&$variables, $hook) {
  * Implements hook_preprocess().
  */
 function williams7_preprocess_islandora_large_image(&$variables) {
-  william_mods_metadata_table($variables);
+  william_mods_metadata($variables);
 }
 
 /**
  * Implements hook_preprocess().
  */
 function williams7_preprocess_islandora_pdf(&$variables) {
-  william_mods_metadata_table($variables);
+  william_mods_metadata($variables);
 }
 
 /**
  * Implements hook_preprocess().
  */
 function williams7_preprocess_islandora_basic_image(&$variables) {
-  william_mods_metadata_table($variables);
-} 
+  william_mods_metadata($variables);
+}
 
 /*
  * Use a MODS to HTML xslt for the metadata fieldset
  */
-function william_mods_metadata_table(&$variables) {
+function william_mods_metadata(&$variables) {
   $object = $variables['islandora_object'];
-  if($object['MODS']) {
+  if ($object['MODS']) {
     $mods = new SimpleXMLElement($object['MODS']->content);
     $path = drupal_get_path("theme", "williams7");
     $xsl = simplexml_load_file("$path/xslt/williams-mods.xsl");
+    $mods_abstract = $mods->xpath('/mods:mods/mods:abstract');
+    if (count($mods_abstract) >= 1) {
+      $variables['mods_abstract'] = (string) $mods_abstract[0];
+    }
     $proc = new XSLTProcessor;
     $proc->importStyleSheet($xsl);
     $mods_table_html = $proc->transformToXML($mods);
@@ -264,8 +268,6 @@ function william_mods_metadata_table(&$variables) {
       '#type' => 'markup',
       '#markup' => $mods_table_html,
     );
-
-    //dsm();
     $variables['metadata_table'] = drupal_render($form);
   }
 }

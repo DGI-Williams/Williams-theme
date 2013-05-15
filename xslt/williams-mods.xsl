@@ -338,33 +338,6 @@
     </td>
   </tr>
 </xsl:template>
-
-<xsl:template match="mods:originInfo">
-  <tr>
-    <td class="mods_label">Origin</td>
-    <td class="mods_value">
-      <table>
-        <tr>
-          <td class="mods_label">Date Captured</td>
-          <td class="mods_value"><xsl:value-of select="mods:dateCaptured"/></td>
-        </tr>
-        <tr>
-          <td class="mods_label">Publisher</td>
-          <td class="mods_value"><xsl:value-of select="mods:publisher"/></td>
-        </tr>
-        <tr>
-          <td class="mods_label">Place of Publication</td>
-          <td class="mods_value"><xsl:value-of select="mods:place/mods:placeTerm"/></td>
-        </tr>
-        <tr>
-          <td class="mods_label">Date Published</td>
-          <td class="mods_value"><xsl:value-of select="mods:dateIssued"/></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</xsl:template>
-
 <xsl:template match="text()"/>
 
 </xsl:stylesheet>

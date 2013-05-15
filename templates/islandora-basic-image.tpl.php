@@ -16,9 +16,9 @@
       </div>
     <?php endif; ?>
   <div class="islandora-basic-image-sidebar">
-    <?php if (!empty($dc_array['dc:description']['value'])): ?>
-      <h2><?php print $dc_array['dc:description']['label']; ?></h2>
-      <p><?php print $dc_array['dc:description']['value']; ?></p>
+    <?php if (isset($mods_abstract)): ?>
+      <h2>Description</h2>
+      <p><?php print $mods_abstract; ?></p>
     <?php endif; ?>
     <?php if ($parent_collections): ?>
       <div>
